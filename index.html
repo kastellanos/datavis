@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>DATA VIS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="/images/DATA_VIS.jpg" data-background-size="1280px"></section>
+
+				<section><h1>¿Qué es visualización de Datos?</h1></section>
+
+				<section>
+					<h2>D3.js</h2>
+					<p>D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS.</p>
+				</section>
+				<section>
+					<h2>Prerequisitos</h2>
+					<ul>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Debugging</li>
+						<li>SVG</li>
+					</ul>
+				</section>
+				<section data-background-color="#ffffff">
+
+					<svg height="500px" width="500px" style="border-left: 1px solid green; border-top: 1px solid green;">
+						<circle r="10px" cx="10px" cy="10px"></circle>
+						<rect width="20px" height="20px" x="0px" y="480px"></rect>
+						<circle r="10px" cx="490px" cy="490px"></circle>
+						<rect width="20px" height="20px" x="480px" y="0px"></rect>
+					</svg>
+				</section>
+				<section>
+<pre><code><svg height="500px" width="500px" style="border-left: 1px solid green; border-top: 1px solid green;">
+<circle r="10px" cx="10px" cy="10px"></circle>
+<rect width="20px" height="20px" x="0px" y="480px"></rect>
+<circle r="10px" cx="490px" cy="490px"></circle>
+<rect width="20px" height="20px" x="480px" y="0px"></rect>
+</svg>
+</code></pre>
+				</section>
+				<section>
+					<h2>C3</h2>
+					<p>C3 makes it easy to generate D3-based charts by wrapping the code required to construct the entire chart. We don't need to write D3 code any more.</p>
+				</section>
+				<section>
+					<h2>Ejercicio 1</h2>
+				</section>
+				<section>
+					<h2>Ejercicio 2</h2>
+				</section>
+				<section>
+					<h2>Google Maps</h2>
+				</section>
+				<section><h2>Javascript API</h2><p>Tutorial Básico</p></section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<!-- Load c3.css -->
+		<link href="/js/c3.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Load d3.js and c3.js -->
+		<script src="/js/d3.min.js" charset="utf-8"></script>
+		<script src="/js/c3.min.js"></script>
+		<script>
+            var chart = c3.generate({
+                bindto: '.ej1',
+                data: {
+                    columns: [
+                        ['data1', 15, 12, 13, 15, 14, 12, 13, 14],
+                        ['data2', 50, 20, 10, 40, 15, 25]
+                    ]
+                }
+            });
+		</script>
+	</body>
+</html>
